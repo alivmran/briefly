@@ -39,39 +39,6 @@ lib/
 - ✅ Dark theme with modern UI design
 - ⏳ Email sharing functionality (homework assignment)
 
-## 📚 Tech Stack
-
-- **Flutter** - Cross-platform UI framework
-- **BLoC** - State management using `flutter_bloc`
-- **HTTP** - API communication
-- **Material Design** - UI components
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- Flutter SDK (3.7.2 or higher)
-- Dart SDK
-- Android Studio / VS Code with Flutter extensions
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd tech_news
-```
-
-2. Install dependencies:
-```bash
-flutter pub get
-```
-
-3. Run the app:
-```bash
-flutter run
-```
-
 ## 📝 Workshop Homework Assignment
 
 ### Email Functionality Implementation
