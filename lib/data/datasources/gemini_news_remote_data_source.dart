@@ -1,11 +1,12 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import '../models/news_item.dart';
 import 'news_remote_data_source.dart';
 
 class GeminiNewsRemoteDataSource implements NewsRemoteDataSource {
   final http.Client client;
-  final String _url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyB6pbeOvSs_D4D3qyA8Baz1Ax5jOYT6IfU';
+  String get _url => 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${dotenv.env["GEMINI_API_KEY"]}';
 
   GeminiNewsRemoteDataSource({http.Client? client}) : client = client ?? http.Client();
 
