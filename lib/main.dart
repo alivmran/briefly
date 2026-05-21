@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/news_bloc.dart';
-import 'data/datasources/news_remote_data_source.dart';
+import 'data/datasources/gemini_news_remote_data_source.dart';
+import 'data/datasources/node_news_remote_data_source.dart';
 import 'data/repositories/news_repository.dart';
 import 'presentation/screens/news_screen.dart';
 
 void main() {
-  final repository = NewsRepository(remoteDataSource: NewsRemoteDataSource());
+  final repository = NewsRepository(
+    dataSources: [
+      NodeNewsRemoteDataSource(),
+      GeminiNewsRemoteDataSource(),
+    ],
+  );
 
   runApp(NewsApp(repository: repository));
 }
